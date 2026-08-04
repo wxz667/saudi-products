@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙特智算中心 - 产品介绍</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:"Microsoft Yahei",sans-serif;background:#ffffff;color:#333;line-height:1.8;}
+        .lang-wrap{position:fixed;top:12px;right:12px;z-index:100;}
+        #langSel{padding:6px 12px;background:#004080;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer;}
+        .container{max-width:1000px;margin:0 auto;padding:60px 16px 24px;}
+        h1{font-size:34px;margin-bottom:12px;color:#1a1a1a;text-align:center;padding-bottom:12px;border-bottom:3px solid #004080;}
+        .img-tip{text-align:center;margin:20px 0;}
+        .img-tip img{max-width:100%;width:100%;border-radius:6px;}
+        .img-tip p{color:#666;font-size:16px;margin-top:8px;}
+        h2{font-size:28px;margin:32px 0 16px;color:#0040aa;}
+        table{width:100%;border-collapse:collapse;background:#fff;margin:16px 0 24px;}
+        th,td{border:1px solid #b8c8dd;padding:14px 16px;font-size:18px;}
+        th{background:#e8f1fb;color:#222;}
+        ul.item-list{padding-left:24px;margin:10px 0 28px;font-size:18px;}
+        ul.item-list li{margin-bottom:16px;}
+        .back-link{display:inline-block;margin:16px 0;color:#004080;text-decoration:none;font-size:16px;}
+        .back-link:hover{text-decoration:underline;}
+        #openConsultBtn,.modal-submit-btn{padding:12px 28px;background:#0052cc;color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;margin:16px 0;}
+        #openConsultBtn:hover,.modal-submit-btn:hover{background:#0040a3;}
+        .modal-submit-btn{width:100%;margin-top:8px;}
+
+        [data-en],[data-ar]{display:none;}
+        body.lang-zh [data-zh]{display:initial;}
+        body.lang-en [data-zh]{display:none;}
+        body.lang-en [data-en]{display:initial;}
+        body.lang-ar [data-zh],body.lang-ar [data-en]{display:none;}
+        body.lang-ar [data-ar]{display:initial;}
+        body.lang-ar{direction:rtl;font-family:system-ui,sans-serif;}
+        body.lang-ar th,body.lang-ar td{text-align:right;}
+        body.lang-ar .num-ltr{direction:ltr;display:inline-block;}
+        body.lang-ar ul.item-list{padding-right:24px;padding-left:0;}
+
+        #consultMask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center;}
+        #consultMask.active{display:flex;}
+        .modal-box{background:#fff;width:92%;max-width:520px;border-radius:8px;position:relative;padding:32px 28px;max-height:90vh;overflow-y:auto;}
+        #closeConsultBtn{position:absolute;right:20px;top:20px;font-size:30px;cursor:pointer;color:#666;line-height:1;}
+        .modal-box h3{margin:0 0 24px 0;font-size:24px;font-weight:bold;color:#111;}
+        .field-group{margin-bottom:18px;}
+        .field-group label{display:block;font-size:16px;color:#555;margin-bottom:6px;font-weight:bold;}
+        .field-group input[type="text"],.field-group input[type="email"],.field-group input[type="tel"],.field-group textarea,.field-group select{width:100%;padding:10px 12px;border:1px solid #ccc;border-radius:4px;font-size:15px;font-family:inherit;}
+        .field-group textarea{resize:vertical;min-height:80px;}
+        .checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:16px;}
+        .checkbox-group label{cursor:pointer;font-weight:normal;}
+        .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:12px 28px;border-radius:6px;font-size:16px;z-index:9999;display:none;}
+        .toast.show{display:block;animation:fadeInOut 2.5s forwards;}
+        @keyframes fadeInOut{0%{opacity:0;top:0}15%{opacity:1;top:20px}70%{opacity:1;top:20px}100%{opacity:0;top:0}}
+    </style>
+</head>
+<body class="lang-zh">
+<div class="lang-wrap">
+    <select id="langSel">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+</div>
+
+<div class="container">
+    <a class="back-link" href="index.html">
+        <span data-zh>← 返回首页</span>
+        <span data-en>← Back to Home</span>
+        <span data-ar>→ العودة للرئيسية</span>
+    </a>
+    <h1>
+        <span data-zh>沙特智算中心</span>
+        <span data-en>Saudi AI DC</span>
+        <span data-ar>مركز الحوسبة الذكية السعودي</span>
+    </h1>
+
+    <div class="img-tip">
+        <img alt="智算中心" src="images/aidc.jpg" onerror="this.parentElement.innerHTML='<div style=\'background:#e8f1fb;border-radius:6px;padding:60px 20px;text-align:center;color:#004080;font-size:18px;\'>🖥<br><span data-zh>智算中心项目示意图</span><span data-en>AI Digital Center Project Schematic</span><span data-ar>رسم تخطيطي لمشروع مركز الحوسبة الذكية</span></div>'">
+        <p data-zh>智算中心项目示意图</p>
+        <p data-en>AI Digital Center Project Schematic Diagram</p>
+        <p data-ar>رسم تخطيطي لمشروع مركز الحوسبة الذكية</p>
+    </div>
+
+    <h2><span data-zh>项目概述</span><span data-en>Project Overview</span><span data-ar>نظرة عامة على المشروع</span></h2>
+    <p data-zh>AI DC（AI Digital Center）即沙特国家信息中心National Information Center，整体解决方案由特变电工提供。项目依托特变电工TBEA电力设备与电网成套解决方案，为大数据业务提供高可靠算力电力保障，助力沙特人工智能产业发展，项目总算力规模可达6GW。项目产出算力面向Token service provider(Off-taker)对外销售，为沙特AI生态建设提供坚实基础设施底座。</p>
+    <p data-en>AI DC (AI Digital Center), also known as National Information Center of Saudi Arabia, is fully solution-provided by TBEA. Relying on TBEA power equipment and integrated power-grid solutions, the project supplies high-reliability power support for big-data computing capacity to boost Saudi AI industry development, with total computing power up to 6GW. The computing resources are sold to Token service provider(Off-taker), building solid infrastructure foundation for Saudi AI ecosystem.</p>
+    <p data-ar>مركز الحوسبة الذكية AI DC (مركز البيانات الرقمي للذكاء الاصطناعي) وهو المركز الوطني للمعلومات السعودي، يقدم شركة تي بي إي إيه (TBEA) الحل المتكامل للمشروع. يعتمد المشروع على معدات الطاقة وحلول الشبكات الكهربائية المتكاملة من تي بي إي إيه لتوفير دعم طاقة موثوق لقدرة الحوسبة للبيانات الضخمة، ويدفع تطوير صناعة الذكاء الاصطناعي في السعودية بإجمالي قدرة حوسبة تصل إلى <span class="num-ltr">6 جيجاوات</span>. يتم بيع موارد الحوسبة إلى Token service provider(Off‑taker) لتأسيس قاعدة بنية تحتية قوية لنظام الذكاء الاصطناعي السعودي.</p>
+
+    <h2><span data-zh>核心项目参数</span><span data-en>Key Project Parameters</span><span data-ar>المعلمات الرئيسية للمشروع</span></h2>
+    <table>
+        <tr><th><span data-zh>参数项目</span><span data-en>Item</span><span data-ar>البند</span></th><th><span data-zh>参数指标</span><span data-en>Specifications</span><span data-ar>المواصفات</span></th></tr>
+        <tr><td><span data-zh>项目名称</span><span data-en>Project Name</span><span data-ar>اسم المشروع</span></td><td><span class="num-ltr">AI DC（National Information Center）</span></td></tr>
+        <tr><td><span data-zh>总算力规模</span><span data-en>Total Computing Capacity</span><span data-ar>إجمالي قدرة الحوسبة</span></td><td><span class="num-ltr">6 GW</span></td></tr>
+        <tr><td><span data-zh>电力支撑方案</span><span data-en>Power Support Solution</span><span data-ar>حل دعم الطاقة</span></td><td><span data-zh>TBEA电力产品及电网成套解决方案</span><span data-en>TBEA power products & integrated grid solution</span><span data-ar>منتجات الطاقة وحلول الشبكات المتكاملة لشركة TBEA</span></td></tr>
+        <tr><td><span data-zh>算力接收方</span><span data-en>Off-taker</span><span data-ar>جهة استلام قدرة الحوسبة</span></td><td><span class="num-ltr">Token service provider</span></td></tr>
+    </table>
+
+    <h2><span data-zh>项目价值</span><span data-en>Project Value</span><span data-ar>قيمة المشروع</span></h2>
+    <ul class="item-list">
+        <li><span data-zh>特变电工完整输出电力与算力基础设施一体化解决方案，服务沙特国家级信息中心建设。</span><span data-en>TBEA delivers integrated solution combining power supply and computing-infrastructure for the construction of Saudi national information center.</span><span data-ar>تقدم شركة تي بي إي إيه حل متكامل يدمج إمداد الطاقة وبنية تحتية الحوسبة لخدمة بناء المركز الوطني للمعلومات السعودي.</span></li>
+        <li><span data-zh>6GW超大算力供给，为沙特人工智能、大数据产业发展提供强大算力底座。</span><span data-en>Massive 6GW computing capacity provides powerful computing foundation for Saudi AI and big-data industry.</span><span data-ar>قدرة حوسبة ضخمة تبلغ <span class="num-ltr">6 جيجاوات</span> توفر قاعدة حوسبة قوية لصناعة الذكاء الاصطناعي والبيانات الضخمة في السعودية.</span></li>
+        <li><span data-zh>算力资源面向Token service provider对外销售，构建商业化算力运营模式，赋能沙特AI产业生态。</span><span data-en>Computing resources are sold to Token service provider to build commercial computing-operation model and empower Saudi AI industrial ecosystem.</span><span data-ar>يتم بيع موارد الحوسبة إلى Token service provider لإنشاء نموذج تشغيل حوسبة تجاري ودعم النظام الصناعي للذكاء الاصطناعي في السعودية.</span></li>
+    </ul>
+
+    <p>
+        <span data-zh>如需获取报价、详细方案、完整样本资料，请点击按钮提交咨询需求：</span>
+        <span data-en>For quotation, detailed solution and datasheet, click to submit inquiry:</span>
+        <span data-ar>للحصول على السعر والحلول التفصيلية وبيانات المنتج، انقر لإرسال استفسار:</span>
+    </p>
+    <button id="openConsultBtn">
+        <span data-zh>项目咨询</span>
+        <span data-en>Inquiry</span>
+        <span data-ar>استفسار المشروع</span>
+    </button>
+</div>
+
+<div id="consultMask">
+  <div class="modal-box">
+    <span id="closeConsultBtn">&times;</span>
+    <h3><span data-zh>留言咨询</span><span data-en>Contact Inquiry</span><span data-ar>استفسار بالرسالة</span></h3>
+    <div class="field-group">
+      <label><span data-zh>咨询类型</span><span data-en>Inquiry Type</span><span data-ar>نوع الاستفسار</span></label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="type" value="quote"> <span data-zh>报价</span><span data-en>Quotation</span><span data-ar>عرض سعر</span></label>
+        <label><input type="checkbox" name="type" value="tech"> <span data-zh>技术方案</span><span data-en>Technical Solution</span><span data-ar>حل فني</span></label>
+        <label><input type="checkbox" name="type" value="sample"> <span data-zh>样本资料</span><span data-en>Datasheet</span><span data-ar>ورقة بيانات</span></label>
+        <label><input type="checkbox" name="type" value="other"> <span data-zh>其他</span><span data-en>Others</span><span data-ar>أخرى</span></label>
+      </div>
+    </div>
+    <div class="field-group"><label><span data-zh>您的姓名</span><span data-en>Your Name</span><span data-ar>اسمك</span> <span style="color:red">*</span></label><input type="text" id="consultName"></div>
+    <div class="field-group"><label><span data-zh>公司名称</span><span data-en>Company</span><span data-ar>الشركة</span></label><input type="text" id="consultCompany"></div>
+    <div class="field-group"><label><span data-zh>电子邮箱</span><span data-en>Email</span><span data-ar>البريد الإلكتروني</span> <span style="color:red">*</span></label><input type="email" id="consultEmail"></div>
+    <div class="field-group"><label><span data-zh>联系电话</span><span data-en>Phone</span><span data-ar>رقم الهاتف</span></label><input type="tel" id="consultPhone"></div>
+    <div class="field-group"><label><span data-zh>留言内容</span><span data-en>Message</span><span data-ar>الرسالة</span></label><textarea id="consultMsg"></textarea></div>
+    <button class="modal-submit-btn" id="submitConsult"><span data-zh>提交咨询</span><span data-en>Submit Inquiry</span><span data-ar>إرسال الاستفسار</span></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+    var sel=document.getElementById('langSel');
+    var saved=localStorage.getItem('lang')||'zh';
+    document.body.className='lang-'+saved;sel.value=saved;
+    sel.addEventListener('change',function(){var v=sel.value;document.body.className='lang-'+v;localStorage.setItem('lang',v);});
+    var mask=document.getElementById('consultMask');
+    document.getElementById('openConsultBtn').addEventListener('click',function(){mask.classList.add('active');});
+    document.getElementById('closeConsultBtn').addEventListener('click',function(){mask.classList.remove('active');});
+    mask.addEventListener('click',function(e){if(e.target===mask)mask.classList.remove('active');});
+    function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(function(){t.className='toast';},2600);}
+    document.getElementById('submitConsult').addEventListener('click',function(){
+        var name=document.getElementById('consultName').value.trim();
+        var email=document.getElementById('consultEmail').value.trim();
+        if(!name){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your name':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال اسمك':'请输入您的姓名'));return;}
+        if(!email){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your email':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال بريدك الإلكتروني':'请输入电子邮箱'));return;}
+        var types=Array.from(document.querySelectorAll('input[name="type"]:checked')).map(function(cb){return cb.value;}).join(',')||'未选择';
+        console.log('咨询提交:',{product:'沙特智算中心',types:types,name:name,email:email,message:document.getElementById('consultMsg').value.trim()});
+        mask.classList.remove('active');
+        document.querySelectorAll('#consultName,#consultEmail,#consultCompany,#consultPhone,#consultMsg').forEach(function(el){el.value='';});
+        document.querySelectorAll('input[name="type"]').forEach(function(cb){cb.checked=false;});
+        showToast(document.body.className.indexOf('lang-en')>=0?'Submitted successfully!':(document.body.className.indexOf('lang-ar')>=0?'تم الإرسال بنجاح!':'提交成功！我们会尽快与您联系。'));
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBEA 沙特项目 - 产品展示</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{
+            font-family:"Microsoft Yahei",sans-serif;
+            background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);
+            min-height:100vh;
+            color:#333;
+        }
+        .lang-wrap{
+            position:fixed;top:12px;right:12px;z-index:100;
+        }
+        #langSel{
+            padding:6px 12px;background:#004080;color:#fff;
+            border:none;border-radius:4px;font-size:14px;cursor:pointer;
+        }
+        .hero{
+            text-align:center;padding:80px 20px 40px;
+            background:linear-gradient(135deg,#001529 0%,#004080 100%);
+            color:#fff;
+        }
+        .hero h1{font-size:42px;margin-bottom:12px;}
+        .hero p{font-size:18px;opacity:0.85;max-width:700px;margin:0 auto;}
+        .container{max-width:1100px;margin:0 auto;padding:40px 16px 40px;}
+        .card-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+            gap:24px;
+            margin-top:-20px;
+        }
+        .card{
+            background:#fff;border-radius:12px;
+            overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);
+            transition:transform .25s,box-shadow .25s;
+            cursor:pointer;text-decoration:none;color:inherit;
+            display:block;
+        }
+        .card:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(0,0,0,0.15);}
+        .card-img{
+            height:180px;background:linear-gradient(135deg,#004080,#0066cc);
+            display:flex;align-items:center;justify-content:center;
+            font-size:56px;color:#fff;
+        }
+        .card:nth-child(2) .card-img{background:linear-gradient(135deg,#003366,#005599);}
+        .card:nth-child(3) .card-img{background:linear-gradient(135deg,#002244,#004488);}
+        .card:nth-child(4) .card-img{background:linear-gradient(135deg,#001133,#003366);}
+        .card-body{padding:20px;}
+        .card-body h3{font-size:20px;margin-bottom:8px;color:#1a1a1a;}
+        .card-body p{font-size:14px;color:#666;line-height:1.6;}
+        .footer{
+            text-align:center;padding:40px 16px;color:#999;font-size:13px;
+        }
+        /* 多语言显示 */
+        [data-en],[data-ar]{display:none;}
+        body.lang-zh [data-zh]{display:initial;}
+        body.lang-en [data-zh]{display:none;}
+        body.lang-en [data-en]{display:initial;}
+        body.lang-ar [data-zh],body.lang-ar [data-en]{display:none;}
+        body.lang-ar [data-ar]{display:initial;}
+        body.lang-ar{direction:rtl;font-family:system-ui,sans-serif;}
+    </style>
+</head>
+<body class="lang-zh">
+<div class="lang-wrap">
+    <select id="langSel">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+</div>
+
+<div class="hero">
+    <h1>
+        <span data-zh>TBEA 沙特项目展示</span>
+        <span data-en>TBEA Saudi Projects Showcase</span>
+        <span data-ar>مشاريع TBEA السعودية</span>
+    </h1>
+    <p>
+        <span data-zh>特变电工为沙特电网及数字基础设施建设提供全套解决方案</span>
+        <span data-en>TBEA delivers comprehensive solutions for Saudi power grid & digital infrastructure</span>
+        <span data-ar>تقدم TBEA حلولاً متكاملة للبنية التحتية للشبكة الكهربائية والرقمية السعودية</span>
+    </p>
+</div>
+
+<div class="container">
+    <div class="card-grid">
+        <a class="card" href="condenser.html">
+            <div class="card-img">⚡</div>
+            <div class="card-body">
+                <h3><span data-zh>同步调相机</span><span data-en>Synchronous Condenser</span><span data-ar>المكثف المتزامن</span></h3>
+                <p><span data-zh>86Mvar · 13.8kV · 60Hz · 动态无功补偿</span><span data-en>86Mvar · 13.8kV · 60Hz · Dynamic VAR Compensation</span><span data-ar>86 ميجا فار · 13.8 ك.ف · 60 هرتز · تعويض ديناميكي</span></p>
+            </div>
+        </a>
+        <a class="card" href="aidc.html">
+            <div class="card-img">🖥</div>
+            <div class="card-body">
+                <h3><span data-zh>智算中心</span><span data-en>AI Data Center</span><span data-ar>مركز الحوسبة الذكية</span></h3>
+                <p><span data-zh>6GW总算力 · TBEA整体解决方案 · 国家信息中心</span><span data-en>6GW Capacity · TBEA Integrated Solution · NIC</span><span data-ar>6 جيجاوات · حل TBEA المتكامل · المركز الوطني للمعلومات</span></p>
+            </div>
+        </a>
+        <a class="card" href="gis.html">
+            <div class="card-img">🔌</div>
+            <div class="card-body">
+                <h3><span data-zh>380kV GIS</span><span data-en>380kV GIS</span><span data-ar>GIS 380 ك.ف</span></h3>
+                <p><span data-zh>380kV · 3150A · SF₆气体绝缘 · 高可靠性</span><span data-en>380kV · 3150A · SF₆ Gas Insulated · High Reliability</span><span data-ar>380 ك.ف · 3150 أمبير · عازل SF₆ · موثوقية عالية</span></p>
+            </div>
+        </a>
+        <a class="card" href="transformer.html">
+            <div class="card-img">🔋</div>
+            <div class="card-body">
+                <h3><span data-zh>三绕组变压器</span><span data-en>Three-winding Transformer</span><span data-ar>محول ثلاثي اللفات</span></h3>
+                <p><span data-zh>380/132/13.8kV · 502.5MVA · YNa0d11</span><span data-en>380/132/13.8kV · 502.5MVA · YNa0d11</span><span data-ar>380/132/13.8 ك.ف · 502.5 م.ف.أ</span></p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2025 TBEA. All rights reserved.</p>
+</div>
+
+<script>
+(function(){
+    var sel=document.getElementById('langSel');
+    var saved=localStorage.getItem('lang')||'zh';
+    document.body.className='lang-'+saved;
+    sel.value=saved;
+    sel.addEventListener('change',function(){
+        var v=sel.value;
+        document.body.className='lang-'+v;
+        localStorage.setItem('lang',v);
+    });
+})();
+</script>
+</body>
+</html>
