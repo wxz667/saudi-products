@@ -15,7 +15,7 @@ def generate(url, output="qrcode.png"):
     )
     qr.add_data(url)
     qr.make(fit=True)
-    img = qr.make_image(fill_color="#004080", back_color="white")
+    img = qr.make_image(fill_color="black", back_color="white")
     img.save(output)
     print(f"QR code saved: {output}")
     print(f"URL: {url}")
