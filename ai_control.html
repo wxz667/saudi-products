@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI控制中心 - 项目介绍</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:"Microsoft Yahei",sans-serif;background:#ffffff;color:#333;line-height:1.8;}
+        .lang-wrap{position:fixed;top:12px;right:12px;z-index:100;}
+        #langSel{padding:6px 12px;background:#004080;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer;}
+        .container{max-width:1100px;margin:0 auto;padding:60px 20px 40px;}
+        h1{font-size:32px;text-align:center;margin-bottom:30px;color:#003366;padding-bottom:12px;border-bottom:3px solid #004080;}
+        .section-block{margin-bottom:48px;}
+        .section-title{font-size:22px;margin-bottom:12px;color:#004080;padding-bottom:8px;border-bottom:2px solid #e0e8f0;}
+        .video-box{width:100%;max-width:720px;margin:0 auto 16px;background:#f4f7fa;border:1px dashed #99b8d8;border-radius:8px;padding:12px;text-align:center;}
+        video{width:100%;border-radius:6px;}
+        .video-tip{font-size:14px;color:#667788;padding:8px;}
+        .desc-text{font-size:16px;text-align:justify;margin-bottom:10px;}
+
+        [data-zh],[data-en],[data-ar]{display:none;}
+        body.lang-zh [data-zh]{display:inline;}
+        body.lang-en [data-en]{display:inline;}
+        body.lang-ar [data-ar]{display:inline;}
+        [data-zh].block,[data-en].block,[data-ar].block{display:none;}
+        body.lang-zh [data-zh].block{display:block;}
+        body.lang-en [data-en].block{display:block;}
+        body.lang-ar [data-ar].block{display:block;}
+        body.lang-ar{direction:rtl;font-family:system-ui,sans-serif;}
+        body.lang-ar .lang-wrap{left:12px;right:auto;}
+
+        .back-link{display:inline-block;margin:16px 0;color:#004080;text-decoration:none;font-size:16px;}
+        .back-link:hover{text-decoration:underline;}
+
+        .consult-btn{position:fixed;bottom:24px;right:24px;z-index:99;padding:12px 22px;background:#004080;color:#fff;border:none;border-radius:6px;font-size:16px;cursor:pointer;}
+        .consult-btn:hover{background:#003366;}
+        body.lang-ar .consult-btn{left:24px;right:auto;}
+
+        #consultMask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center;}
+        #consultMask.active{display:flex;}
+        .modal-box{background:#fff;width:92%;max-width:520px;border-radius:8px;position:relative;padding:32px 28px;max-height:90vh;overflow-y:auto;}
+        #closeConsultBtn{position:absolute;right:20px;top:20px;font-size:30px;cursor:pointer;color:#666;line-height:1;}
+        .modal-box h3{margin:0 0 24px 0;font-size:24px;font-weight:bold;color:#111;}
+        .field-group{margin-bottom:18px;}
+        .field-group label{display:block;font-size:16px;color:#555;margin-bottom:6px;font-weight:bold;}
+        .field-group input[type="text"],.field-group input[type="email"],.field-group input[type="tel"],.field-group textarea{width:100%;padding:10px 12px;border:1px solid #ccc;border-radius:4px;font-size:15px;font-family:inherit;}
+        .field-group textarea{resize:vertical;min-height:80px;}
+        .checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:16px;}
+        .checkbox-group label{cursor:pointer;font-weight:normal;}
+        .modal-submit-btn{width:100%;margin-top:8px;padding:12px 28px;background:#004080;color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;}
+        .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:12px 28px;border-radius:6px;font-size:16px;z-index:9999;display:none;}
+        .toast.show{display:block;animation:fadeInOut 2.5s forwards;}
+        @keyframes fadeInOut{0%{opacity:0;top:0}15%{opacity:1;top:20px}70%{opacity:1;top:20px}100%{opacity:0;top:0}}
+    </style>
+</head>
+<body class="lang-zh">
+<div class="lang-wrap">
+    <select id="langSel">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+</div>
+
+<div class="container">
+    <a class="back-link" href="index.html">
+        <span data-zh>← 返回首页</span>
+        <span data-en>← Back to Home</span>
+        <span data-ar>→ العودة للرئيسية</span>
+    </a>
+    <h1>
+        <span data-zh>AI控制中心项目</span>
+        <span data-en>AI Control Center Project</span>
+        <span data-ar>مشروع مركز التحكم بالذكاء الاصطناعي</span>
+    </h1>
+
+    <!-- 模块1：光伏侧 -->
+    <div class="section-block">
+        <h2 class="section-title">
+            <span data-zh>1. 光伏侧环境适应与精准运维</span>
+            <span data-en>1. PV-side Environmental Adaptation & Precise O&M</span>
+            <span data-ar>1. التكيف البيئي والصيانة الدقيقة لجانب الطاقة الضوئية</span>
+        </h2>
+        <div class="video-box">
+            <video src="images/pv.mp4" controls playsinline></video>
+            <div class="video-tip">
+                <span data-zh>光伏侧智能运维演示</span>
+                <span data-en>PV-side intelligent O&M demo</span>
+                <span data-ar>عرض الصيانة الذكية للجانب الضوئي</span>
+            </div>
+        </div>
+        <p class="desc-text" data-zh>针对沙特沙漠沙尘大、高温频发的特点，AI综合气象数据与实时发电数据，精准预测沙尘暴与极端高温天气，提前调整光伏板倾角以减少积尘磨损、优化散热效果；同时基于面板积尘程度与发电量衰减数据，规划最优清洗路线与时机，实现精准清洗，显著节约沙漠水资源与人工运维成本，提升发电效率。</p>
+        <p class="desc-text" data-en>Considering heavy sand-dust and frequent high-temperature in Saudi deserts, AI integrates meteorological data and real-time power generation data to accurately forecast sandstorms and extreme heat. It adjusts PV panel tilt angles in advance to reduce dust-caused wear and improve heat dissipation. Based on panel dust accumulation and power-generation attenuation data, AI plans optimal cleaning routes and timing for precise cleaning, greatly saving desert water resources and labor O&M costs and improving power-generation efficiency.</p>
+        <p class="desc-text" data-ar>بالنسبة لخصائص الصحارى السعودية المتمثلة في كثرة الغبار والرمال وارتفاع درجات الحرارة المتكرر، يدمج الذكاء الاصطناعي بيانات الأرصاد الجوية وبيانات التوليد الكهربائي الفعلي للتنبؤ بدقة بالعواصف الرملية ودرجات الحرارة القصوى، ويقوم بتعديل زاوية ميل الألواح الضوئية مسبقاً لتقليل التآكل الناتج عن تراكم الغبار وتحسين تأثير التبريد. وبناءً على درجة تراكم الغبار على الألواح وبيانات انخفاض إنتاج الكهرباء، يخطط الذكاء الاصطناعي لأفضل مسارات وأوقات التنظيف لتحقيق تنظيف دقيق، مما يوفر بشكل كبير موارد المياه الصحراوية وتكاليف الصيانة اليدوية ويرفع كفاءة توليد الكهرباء.</p>
+    </div>
+
+    <!-- 模块2：风电侧 -->
+    <div class="section-block">
+        <h2 class="section-title">
+            <span data-zh>2. 风电侧极端天气全周期防护</span>
+            <span data-en>2. Wind-power Full-cycle Protection against Extreme Weather</span>
+            <span data-ar>2. الحماية الدورية الكاملة لجانب طاقة الرياح من الظروف الجوية القصوى</span>
+        </h2>
+        <div class="video-box">
+            <video src="images/wind.mp4" controls playsinline></video>
+            <div class="video-tip">
+                <span data-zh>风电侧智能防护演示</span>
+                <span data-en>Wind-power intelligent protection demo</span>
+                <span data-ar>عرض الحماية الذكية لطاقة الرياح</span>
+            </div>
+        </div>
+        <p class="desc-text" data-zh>围绕沙尘暴场景实现全流程智能管控：灾害前期通过气象预测提前预警，指导风机调整叶片角度；灾害中期根据沙尘暴的轨迹、速度与方向实时调整风机运行参数，最大程度降低极端天气对设备的损伤；灾害后期辅助无人机精准定位故障点位，指导检修作业，大幅缩短故障处理时长。</p>
+        <p class="desc-text" data-en>Full-process intelligent management for sandstorm scenarios: Early warning via meteorological forecast before disasters to adjust fan blade angles. During sandstorms, real-time fan parameter adjustment according to sandstorm track, speed and direction to minimize equipment damage. After disasters, drones are assisted to pinpoint fault locations for maintenance, greatly shortening fault-handling time.</p>
+        <p class="desc-text" data-ar>تحكم ذكي كامل في سيناريوهات العواصف الرملية: في مرحلة ما قبل الكارثة، يتم إصدار إنذارات مبكرة عبر التنبؤ الجوي لتوجيه تعديل زوايا ريش المرواح. أثناء الكارثة، يتم تعديل معلمات تشغيل المرواح في الوقت الفعلي وفقاً لمسار العاصفة الرملية وسرعتها واتجاهها لتقليل الضرر الذي تلحقه الظروف القصوى بالمعدات إلى أقصى حد. بعد وقوع الكارثة، يساعد الطائرات بدون طيار على تحديد نقاط الأعطال بدقة لتوجيه أعمال الإصلاح، مما يقلل بشكل كبير من مدة معالجة الأعطال.</p>
+    </div>
+
+    <!-- 模块3：储能侧 -->
+    <div class="section-block">
+        <h2 class="section-title">
+            <span data-zh>3. 储能侧安全管控与经济性优化</span>
+            <span data-en>3. Energy-storage Safety Control & Economic Optimization</span>
+            <span data-ar>3. التحكم الآمن وتحسين الاقتصادية لنظام تخزين الطاقة</span>
+        </h2>
+        <div class="video-box">
+            <video src="images/storage.mp4" controls playsinline></video>
+            <div class="video-tip">
+                <span data-zh>储能侧智能管控演示</span>
+                <span data-en>Energy-storage intelligent control demo</span>
+                <span data-ar>عرض التحكم الذكي لتخزين الطاقة</span>
+            </div>
+        </div>
+        <p class="desc-text" data-zh>基于AI的储能系统实时监控与预警：实时分析电池组电压、温度、SOC等关键参数，提前识别热失控风险并自动触发分级保护策略。结合电价预测与负荷曲线，动态优化充放电策略，最大化峰谷套利收益，提升储能系统全生命周期经济性。</p>
+        <p class="desc-text" data-en>AI-based real-time monitoring and early warning for energy storage: Real-time analysis of battery voltage, temperature, SOC and other key parameters to identify thermal runaway risks in advance and automatically trigger graded protection strategies. Combined with electricity price forecasting and load curves, dynamically optimize charging/discharging strategies to maximize peak-valley arbitrage revenue and improve full-life-cycle economics of energy storage systems.</p>
+        <p class="desc-text" data-ar>مراقبة وتحذير مبكر لأنظمة تخزين الطاقة قائم على الذكاء الاصطناعي: تحليل آني لجهد البطارية ودرجة الحرارة وحالة الشحن وغيرها من المعلمات الرئيسية، والتعرف المبكر على مخاطر الانفلات الحراري وإطلاق استراتيجيات حماية متدرجة تلقائياً. مع التنبؤ بأسعار الكهرباء ومنحنيات الأحمال، يتم تحسين استراتيجيات الشحن والتفريغ ديناميكياً لتعظيم أرباح المراجحة بين الذروة والوادي وتحسين اقتصادية نظام تخزين الطاقة على مدى دورة حياته.</p>
+    </div>
+
+    <!-- 模块4：电网设备 -->
+    <div class="section-block">
+        <h2 class="section-title">
+            <span data-zh>4. 电网设备智能诊断与毫秒级调度</span>
+            <span data-en>4. Grid Equipment Intelligent Diagnosis & Millisecond-level Dispatch</span>
+            <span data-ar>4. التشخيص الذكي لمعدات الشبكة والتحكم بالميلي ثانية</span>
+        </h2>
+        <div class="video-box">
+            <video src="images/grid.mp4" controls playsinline></video>
+            <div class="video-tip">
+                <span data-zh>电网智能诊断与调度演示</span>
+                <span data-en>Grid intelligent diagnosis & dispatch demo</span>
+                <span data-ar>عرض التشخيص الذكي والتحكم بالشبكة</span>
+            </div>
+        </div>
+        <p class="desc-text" data-zh>AI驱动电网设备健康度实时评估：基于变压器、GIS、开关柜等核心设备的多维传感数据，构建设备健康度指数，实现故障提前预警与精准定位。毫秒级电网调度响应：当检测到电网扰动或设备异常，AI调度系统在毫秒内完成故障隔离与负荷转移决策，保障电网稳定运行。</p>
+        <p class="desc-text" data-en>AI-driven real-time grid equipment health assessment: Based on multi-dimensional sensor data from transformers, GIS, switchgear and other core equipment, build equipment health index to achieve advance fault warning and precise location. Millisecond-level grid dispatch response: When grid disturbance or equipment anomaly is detected, the AI dispatch system completes fault isolation and load transfer decisions within milliseconds to ensure stable grid operation.</p>
+        <p class="desc-text" data-ar>تقييم آني لحالة معدات الشبكة بقيادة الذكاء الاصطناعي: بناءً على بيانات الاستشعار متعددة الأبعاد من المحولات ومعدات GIS والمفاتيح الكهربائية وغيرها، يتم بناء مؤشر صحة المعدات لتحقيق الإنذار المبكر بالأعطال وتحديد موقعها بدقة. استجابة تحكم بالميلي ثانية: عند اكتشاف اضطراب أو عطل في المعدات، يقوم نظام التحكم الذكي بإتمام عزل العطل ونقل الأحمال في غضون ميلي ثانية لضمان استقرار الشبكة.</p>
+    </div>
+</div>
+
+<button class="consult-btn" id="openConsultBtn">
+    <span data-zh>📋 项目咨询</span>
+    <span data-en>📋 Inquiry</span>
+    <span data-ar>📋 استفسار</span>
+</button>
+
+<div id="consultMask">
+  <div class="modal-box">
+    <span id="closeConsultBtn">&times;</span>
+    <h3><span data-zh>留言咨询</span><span data-en>Contact Inquiry</span><span data-ar>استفسار بالرسالة</span></h3>
+    <div class="field-group">
+      <label><span data-zh>咨询类型</span><span data-en>Inquiry Type</span><span data-ar>نوع الاستفسار</span></label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="type" value="quote"> <span data-zh>报价</span><span data-en>Quotation</span><span data-ar>عرض سعر</span></label>
+        <label><input type="checkbox" name="type" value="tech"> <span data-zh>技术方案</span><span data-en>Technical Solution</span><span data-ar>حل فني</span></label>
+        <label><input type="checkbox" name="type" value="sample"> <span data-zh>样本资料</span><span data-en>Datasheet</span><span data-ar>ورقة بيانات</span></label>
+        <label><input type="checkbox" name="type" value="other"> <span data-zh>其他</span><span data-en>Others</span><span data-ar>أخرى</span></label>
+      </div>
+    </div>
+    <div class="field-group"><label><span data-zh>您的姓名</span><span data-en>Your Name</span><span data-ar>اسمك</span> <span style="color:red">*</span></label><input type="text" id="consultName"></div>
+    <div class="field-group"><label><span data-zh>公司名称</span><span data-en>Company</span><span data-ar>الشركة</span></label><input type="text" id="consultCompany"></div>
+    <div class="field-group"><label><span data-zh>电子邮箱</span><span data-en>Email</span><span data-ar>البريد الإلكتروني</span> <span style="color:red">*</span></label><input type="email" id="consultEmail"></div>
+    <div class="field-group"><label><span data-zh>联系电话</span><span data-en>Phone</span><span data-ar>رقم الهاتف</span></label><input type="tel" id="consultPhone"></div>
+    <div class="field-group"><label><span data-zh>留言内容</span><span data-en>Message</span><span data-ar>الرسالة</span></label><textarea id="consultMsg"></textarea></div>
+    <button class="modal-submit-btn" id="submitConsult"><span data-zh>提交咨询</span><span data-en>Submit Inquiry</span><span data-ar>إرسال الاستفسار</span></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+    var sel=document.getElementById('langSel');
+    var saved=localStorage.getItem('lang')||'zh';
+    document.body.className='lang-'+saved;sel.value=saved;
+    sel.addEventListener('change',function(){var v=sel.value;document.body.className='lang-'+v;localStorage.setItem('lang',v);});
+    var mask=document.getElementById('consultMask');
+    document.getElementById('openConsultBtn').addEventListener('click',function(){mask.classList.add('active');});
+    document.getElementById('closeConsultBtn').addEventListener('click',function(){mask.classList.remove('active');});
+    mask.addEventListener('click',function(e){if(e.target===mask)mask.classList.remove('active');});
+    function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(function(){t.className='toast';},2600);}
+    document.getElementById('submitConsult').addEventListener('click',function(){
+        var name=document.getElementById('consultName').value.trim();
+        var email=document.getElementById('consultEmail').value.trim();
+        if(!name){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your name':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال اسمك':'请输入您的姓名'));return;}
+        if(!email){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your email':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال بريدك الإلكتروني':'请输入电子邮箱'));return;}
+        var types=Array.from(document.querySelectorAll('input[name="type"]:checked')).map(function(cb){return cb.value;}).join(',')||'未选择';
+        console.log('咨询提交:',{product:'AI控制中心',types:types,name:name,email:email});
+        mask.classList.remove('active');
+        document.querySelectorAll('#consultName,#consultEmail,#consultCompany,#consultPhone,#consultMsg').forEach(function(el){el.value='';});
+        document.querySelectorAll('input[name="type"]').forEach(function(cb){cb.checked=false;});
+        showToast(document.body.className.indexOf('lang-en')>=0?'Submitted successfully!':(document.body.className.indexOf('lang-ar')>=0?'تم الإرسال بنجاح!':'提交成功！我们会尽快与您联系。'));
+    });
+})();
+</script>
+</body>
+</html>

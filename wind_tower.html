@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兆瓦级风力发电塔架 - 产品介绍</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:"Microsoft Yahei",sans-serif;background:#ffffff;color:#333;line-height:1.8;}
+        .lang-wrap{position:fixed;top:12px;right:12px;z-index:100;}
+        #langSel{padding:6px 12px;background:#004080;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer;}
+        .container{max-width:1000px;margin:0 auto;padding:60px 16px 24px;}
+        h1{font-size:34px;margin-bottom:12px;color:#1a1a1a;text-align:center;padding-bottom:12px;border-bottom:3px solid #004080;}
+        .img-tip{text-align:center;margin:20px 0;}
+        .img-tip img{max-width:100%;width:100%;border-radius:6px;}
+        .img-tip p{color:#666;font-size:16px;margin-top:8px;}
+        h2{font-size:28px;margin:32px 0 16px;color:#0040aa;}
+        table{width:100%;border-collapse:collapse;background:#fff;margin:16px 0 24px;}
+        th,td{border:1px solid #b8c8dd;padding:14px 16px;font-size:18px;}
+        th{background:#e8f1fb;color:#222;}
+        ul.item-list{padding-left:24px;margin:10px 0 28px;font-size:18px;}
+        ul.item-list li{margin-bottom:16px;}
+        .back-link{display:inline-block;margin:16px 0;color:#004080;text-decoration:none;font-size:16px;}
+        .back-link:hover{text-decoration:underline;}
+        #openConsultBtn,.modal-submit-btn{padding:12px 28px;background:#0052cc;color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;margin:16px 0;}
+        #openConsultBtn:hover,.modal-submit-btn:hover{background:#0040a3;}
+        .modal-submit-btn{width:100%;margin-top:8px;}
+
+        [data-en],[data-ar]{display:none;}
+        body.lang-zh [data-zh]{display:initial;}
+        body.lang-en [data-zh]{display:none;}
+        body.lang-en [data-en]{display:initial;}
+        body.lang-ar [data-zh],body.lang-ar [data-en]{display:none;}
+        body.lang-ar [data-ar]{display:initial;}
+        body.lang-ar{direction:rtl;font-family:system-ui,sans-serif;}
+        body.lang-ar th,body.lang-ar td{text-align:right;}
+        body.lang-ar .num-ltr{direction:ltr;display:inline-block;}
+        body.lang-ar ul.item-list{padding-right:24px;padding-left:0;}
+
+        #consultMask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center;}
+        #consultMask.active{display:flex;}
+        .modal-box{background:#fff;width:92%;max-width:520px;border-radius:8px;position:relative;padding:32px 28px;max-height:90vh;overflow-y:auto;}
+        #closeConsultBtn{position:absolute;right:20px;top:20px;font-size:30px;cursor:pointer;color:#666;line-height:1;}
+        .modal-box h3{margin:0 0 24px 0;font-size:24px;font-weight:bold;color:#111;}
+        .field-group{margin-bottom:18px;}
+        .field-group label{display:block;font-size:16px;color:#555;margin-bottom:6px;font-weight:bold;}
+        .field-group input[type="text"],.field-group input[type="email"],.field-group input[type="tel"],.field-group textarea,.field-group select{width:100%;padding:10px 12px;border:1px solid #ccc;border-radius:4px;font-size:15px;font-family:inherit;}
+        .field-group textarea{resize:vertical;min-height:80px;}
+        .checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:16px;}
+        .checkbox-group label{cursor:pointer;font-weight:normal;}
+        .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:12px 28px;border-radius:6px;font-size:16px;z-index:9999;display:none;}
+        .toast.show{display:block;animation:fadeInOut 2.5s forwards;}
+        @keyframes fadeInOut{0%{opacity:0;top:0}15%{opacity:1;top:20px}70%{opacity:1;top:20px}100%{opacity:0;top:0}}
+    </style>
+</head>
+<body class="lang-zh">
+<div class="lang-wrap">
+    <select id="langSel">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+</div>
+
+<div class="container">
+    <a class="back-link" href="index.html">
+        <span data-zh>← 返回首页</span>
+        <span data-en>← Back to Home</span>
+        <span data-ar>→ العودة للرئيسية</span>
+    </a>
+    <h1>
+        <span data-zh>兆瓦级风力发电塔架</span>
+        <span data-en>Megawatt-class Wind Turbine Tower</span>
+        <span data-ar>برج توربين الرياح من فئة الميجاوات</span>
+    </h1>
+
+    <div class="img-tip">
+        <img alt="兆瓦级风力发电塔架" src="images/wind_tower.jpg" onerror="this.parentElement.innerHTML='<div style=\'background:#e8f1fb;border-radius:6px;padding:60px 20px;text-align:center;color:#004080;font-size:18px;\'>🌬<br><span data-zh>风力发电塔架示意图</span><span data-en>Wind Turbine Tower</span><span data-ar>برج توربين الرياح</span></div>'">
+        <p data-zh>风力发电塔架示意图</p>
+        <p data-en>Wind Turbine Tower Schematic Diagram</p>
+        <p data-ar>رسم تخطيطي لبرج توربين الرياح</p>
+    </div>
+
+    <h2><span data-zh>设备概述</span><span data-en>Device Overview</span><span data-ar>نظرة عامة على الجهاز</span></h2>
+    <p data-zh>兆瓦级风力发电塔架分为常规塔、高强钢塔、分片塔三类产品，是新能源组部件领域主打产品，可为风电项目提供高质量、高效率塔架支撑。依托智能化生产系统实现高质量、高效率制造，具备突出全生命周期成本优势；从材料、系统设计、全生命周期多维度构建完整安全保障体系。配套塔筒MES信息化系统实现生产全过程追溯，采用国际高端卷板、焊接装备，保障制造工艺水平。可适配不同地形、运输条件，满足多种兆瓦等级风机使用需求。</p>
+    <p data-en>The megawatt-class wind turbine tower includes conventional tower, high-strength steel tower and segmented tower. It is a core new-energy component product, providing high-quality and high-efficiency tower support for wind power projects. Supported by intelligent production system, it realizes high-quality & high-efficiency manufacturing with outstanding life-cycle cost advantages. Complete safety guarantee system is built from material, system design and full-life-cycle dimensions. The tower-barrel MES information system realizes full-process production traceability, with international high-end rolling & welding equipment to guarantee manufacturing quality. It adapts to diverse terrain and transportation constraints for multi-megawatt wind turbines.</p>
+    <p data-ar>برج توربين الرياح من فئة الميجاوات يتضمن البرج العادي، برج الفولاذ عالي القوة والبرج المقسم. هو منتج مكون رئيسي في مجال طاقة الرياح، يوفر دعم برج عالي الجودة وكفاءة عالية لمشاريع طاقة الرياح. بفضل نظام الإنتاج الذكي، يحقق تصنيع عالي الجودة وكفاءة عالية مع مزايا واضحة في تكلفة دورة الحياة الكاملة. يتم بناء نظام ضمان أمان كامل من جوانب المواد والتصميم النظامي ودورة الحياة الكاملة. يوفر نظام معلومات MES للبرج تعقب كامل لعملية الإنتاج، مع معدات دولية متطورة للطي واللحام لضمان جودة التصنيع. يتكيف مع التضاريس المختلفة وقيود النقل لتوربينات الرياح متعددة الميجاوات.</p>
+
+    <h2><span data-zh>核心技术参数</span><span data-en>Key Technical Parameters</span><span data-ar>المعلمات الفنية الرئيسية</span></h2>
+    <table>
+        <tr><th><span data-zh>参数项目</span><span data-en>Parameter Item</span><span data-ar>عنصر المعلمة</span></th><th><span data-zh>参数指标</span><span data-en>Specifications</span><span data-ar>المواصفات</span></th></tr>
+        <tr><td><span data-zh>产品类型</span><span data-en>Product Type</span><span data-ar>نوع المنتج</span></td><td><span data-zh>常规塔 / 高强钢塔 / 分片塔</span><span data-en>Conventional Tower / High-strength Steel Tower / Segmented Tower</span><span data-ar>برج عادي / برج فولاذ عالي القوة / برج مقسم</span></td></tr>
+        <tr><td><span data-zh>高强钢用材</span><span data-en>High-strength Steel Grade</span><span data-ar>درجة الفولاذ عالي القوة</span></td><td><span class="num-ltr">Q390、Q420</span></td></tr>
+        <tr><td><span data-zh>适配风机机型</span><span data-en>Applicable Wind Turbine Model</span><span data-ar>نموذج توربين الرياح المتوافق</span></td><td><span data-zh>8MW及以上大兆瓦机型</span><span data-en>Large-megawatt models of 8MW and above</span><span data-ar>نماذج ميجاوات كبيرة 8 ميجاوات فأكثر</span></td></tr>
+        <tr><td><span data-zh>生产管理系统</span><span data-en>Production Management System</span><span data-ar>نظام إدارة الإنتاج</span></td><td><span data-zh>塔筒MES信息化系统</span><span data-en>Tower-barrel MES information system</span><span data-ar>نظام معلومات MES لبرج التوربين</span></td></tr>
+        <tr><td><span data-zh>适用场景</span><span data-en>Application Scenario</span><span data-ar>سيناريو الاستخدام</span></td><td><span data-zh>山地、丘陵、平原、运输受限场地</span><span data-en>Mountains, hills, plains, sites with transportation restrictions</span><span data-ar>الجبال، التلال، السهول، المواقع ذات قيود النقل</span></td></tr>
+    </table>
+
+    <h2><span data-zh>产品细分优势</span><span data-en>Product Sub-category Advantages</span><span data-ar>مزايا فئات المنتج</span></h2>
+    <ul class="item-list">
+        <li><span data-zh>常规塔：适配山地、丘陵、平原多种地形，组装效率高，可靠性强，现场安装便捷。</span><span data-en>Conventional Tower: Suitable for mountains, hills and plains. High assembly efficiency, strong reliability and convenient on-site installation.</span><span data-ar>البرج العادي: مناسب للجبال والتلال والسهول، كفاءة تجميع عالية، موثوقية قوية وتركيب ميداني سهل.</span></li>
+        <li><span data-zh>高强钢塔：采用Q390/Q420高强钢，实现塔筒轻量化，配套自主稳定焊接工艺，适配8MW及以上大兆瓦风机。</span><span data-en>High-strength Steel Tower: Adopt Q390/Q420 high-strength steel for tower lightweight. Matched with self-developed stable welding technology for 8MW+ large-megawatt units.</span><span data-ar>برج الفولاذ عالي القوة: يستخدم فولاذ Q390/Q420 لتحقيق تخفيف وزن البرج، مع تقنية لحام مستقلة ومستقرة لتوربينات 8 ميجاوات فأكثر.</span></li>
+        <li><span data-zh>分片塔：解决大直径塔筒隧道、桥梁运输限界难题，适用于山区、林区、城市等运输受限项目。</span><span data-en>Segmented Tower: Solve transportation constraints of large-diameter tower under bridges and tunnels, suitable for mountain, forest and urban sites with limited transport conditions.</span><span data-ar>البرج المقسم: يحل مشاكل قيود النقل للبرجات ذات القطر الكبير تحت الجسور والأنفاق، مناسب للمواقع الجبلية والغابات والمدن ذات قيود النقل.</span></li>
+    </ul>
+
+    <h2><span data-zh>项目意义</span><span data-en>Project Significance</span><span data-ar>أهمية المشروع</span></h2>
+    <ul class="item-list">
+        <li><span data-zh>响应新型电力系统建设需求，完善新能源风电产业链组部件供给能力。</span><span data-en>Respond to new power system construction demands and improve new-energy wind-power industry chain component supply capability.</span><span data-ar>تلبية احتياجات بناء نظام الطاقة الجديد وتحسين قدرة توريد مكونات سلسلة صناعة طاقة الرياح الجديدة.</span></li>
+        <li><span data-zh>MES信息化系统实现全流程质量追溯，确保每座塔架从钢材到成品的全程可控。</span><span data-en>MES information system realizes full-process quality traceability, ensuring full control of every tower from steel to finished product.</span><span data-ar>نظام معلومات MES يحقق تتبع الجودة للعملية بأكملها، مما يضمن التحكم الكامل في كل برج من الفولاذ إلى المنتج النهائي.</span></li>
+        <li><span data-zh>三类塔型覆盖不同地形与运输条件，为沙特风电基地建设提供灵活可靠的塔架方案。</span><span data-en>Three tower types cover different terrains and transport conditions, providing flexible and reliable tower solutions for Saudi wind power base construction.</span><span data-ar>ثلاثة أنواع من الأبراج تغطي مختلف التضاريس وظروف النقل، مما يوفر حلول أبراج مرنة وموثوقة لبناء قواعد طاقة الرياح السعودية.</span></li>
+    </ul>
+
+    <p>
+        <span data-zh>如需获取报价、详细方案、完整样本资料，请点击按钮提交咨询需求：</span>
+        <span data-en>For quotation, detailed solution and datasheet, click to submit inquiry:</span>
+        <span data-ar>للحصول على السعر والحلول التفصيلية وبيانات المنتج，انقر لإرسال استفسار:</span>
+    </p>
+    <button id="openConsultBtn"><span data-zh>设备咨询</span><span data-en>Inquiry</span><span data-ar>استفسار الجهاز</span></button>
+</div>
+
+<div id="consultMask">
+  <div class="modal-box">
+    <span id="closeConsultBtn">&times;</span>
+    <h3><span data-zh>留言咨询</span><span data-en>Contact Inquiry</span><span data-ar>استفسار بالرسالة</span></h3>
+    <div class="field-group">
+      <label><span data-zh>咨询类型</span><span data-en>Inquiry Type</span><span data-ar>نوع الاستفسار</span></label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="type" value="quote"> <span data-zh>报价</span><span data-en>Quotation</span><span data-ar>عرض سعر</span></label>
+        <label><input type="checkbox" name="type" value="tech"> <span data-zh>技术方案</span><span data-en>Technical Solution</span><span data-ar>حل فني</span></label>
+        <label><input type="checkbox" name="type" value="sample"> <span data-zh>样本资料</span><span data-en>Datasheet</span><span data-ar>ورقة بيانات</span></label>
+        <label><input type="checkbox" name="type" value="other"> <span data-zh>其他</span><span data-en>Others</span><span data-ar>أخرى</span></label>
+      </div>
+    </div>
+    <div class="field-group"><label><span data-zh>您的姓名</span><span data-en>Your Name</span><span data-ar>اسمك</span> <span style="color:red">*</span></label><input type="text" id="consultName"></div>
+    <div class="field-group"><label><span data-zh>公司名称</span><span data-en>Company</span><span data-ar>الشركة</span></label><input type="text" id="consultCompany"></div>
+    <div class="field-group"><label><span data-zh>电子邮箱</span><span data-en>Email</span><span data-ar>البريد الإلكتروني</span> <span style="color:red">*</span></label><input type="email" id="consultEmail"></div>
+    <div class="field-group"><label><span data-zh>联系电话</span><span data-en>Phone</span><span data-ar>رقم الهاتف</span></label><input type="tel" id="consultPhone"></div>
+    <div class="field-group"><label><span data-zh>留言内容</span><span data-en>Message</span><span data-ar>الرسالة</span></label><textarea id="consultMsg"></textarea></div>
+    <button class="modal-submit-btn" id="submitConsult"><span data-zh>提交咨询</span><span data-en>Submit Inquiry</span><span data-ar>إرسال الاستفسار</span></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+    var sel=document.getElementById('langSel');
+    var saved=localStorage.getItem('lang')||'zh';
+    document.body.className='lang-'+saved;sel.value=saved;
+    sel.addEventListener('change',function(){var v=sel.value;document.body.className='lang-'+v;localStorage.setItem('lang',v);});
+    var mask=document.getElementById('consultMask');
+    document.getElementById('openConsultBtn').addEventListener('click',function(){mask.classList.add('active');});
+    document.getElementById('closeConsultBtn').addEventListener('click',function(){mask.classList.remove('active');});
+    mask.addEventListener('click',function(e){if(e.target===mask)mask.classList.remove('active');});
+    function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(function(){t.className='toast';},2600);}
+    document.getElementById('submitConsult').addEventListener('click',function(){
+        var name=document.getElementById('consultName').value.trim();
+        var email=document.getElementById('consultEmail').value.trim();
+        if(!name){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your name':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال اسمك':'请输入您的姓名'));return;}
+        if(!email){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your email':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال بريدك الإلكتروني':'请输入电子邮箱'));return;}
+        var types=Array.from(document.querySelectorAll('input[name="type"]:checked')).map(function(cb){return cb.value;}).join(',')||'未选择';
+        console.log('咨询提交:',{product:'兆瓦级风力发电塔架',types:types,name:name,email:email});
+        mask.classList.remove('active');
+        document.querySelectorAll('#consultName,#consultEmail,#consultCompany,#consultPhone,#consultMsg').forEach(function(el){el.value='';});
+        document.querySelectorAll('input[name="type"]').forEach(function(cb){cb.checked=false;});
+        showToast(document.body.className.indexOf('lang-en')>=0?'Submitted successfully!':(document.body.className.indexOf('lang-ar')>=0?'تم الإرسال بنجاح!':'提交成功！我们会尽快与您联系。'));
+    });
+})();
+</script>
+</body>
+</html>

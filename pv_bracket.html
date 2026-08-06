@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定可调光伏支架 - 产品介绍</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:"Microsoft Yahei",sans-serif;background:#ffffff;color:#333;line-height:1.8;}
+        .lang-wrap{position:fixed;top:12px;right:12px;z-index:100;}
+        #langSel{padding:6px 12px;background:#004080;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer;}
+        .container{max-width:1000px;margin:0 auto;padding:60px 16px 24px;}
+        h1{font-size:34px;margin-bottom:12px;color:#1a1a1a;text-align:center;padding-bottom:12px;border-bottom:3px solid #004080;}
+        .img-tip{text-align:center;margin:20px 0;}
+        .img-tip img{max-width:100%;width:100%;border-radius:6px;}
+        .img-tip p{color:#666;font-size:16px;margin-top:8px;}
+        h2{font-size:28px;margin:32px 0 16px;color:#0040aa;}
+        table{width:100%;border-collapse:collapse;background:#fff;margin:16px 0 24px;}
+        th,td{border:1px solid #b8c8dd;padding:14px 16px;font-size:18px;}
+        th{background:#e8f1fb;color:#222;}
+        ul.item-list{padding-left:24px;margin:10px 0 28px;font-size:18px;}
+        ul.item-list li{margin-bottom:16px;}
+        .back-link{display:inline-block;margin:16px 0;color:#004080;text-decoration:none;font-size:16px;}
+        .back-link:hover{text-decoration:underline;}
+        #openConsultBtn,.modal-submit-btn{padding:12px 28px;background:#0052cc;color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;margin:16px 0;}
+        #openConsultBtn:hover,.modal-submit-btn:hover{background:#0040a3;}
+        .modal-submit-btn{width:100%;margin-top:8px;}
+
+        [data-en],[data-ar]{display:none;}
+        body.lang-zh [data-zh]{display:initial;}
+        body.lang-en [data-zh]{display:none;}
+        body.lang-en [data-en]{display:initial;}
+        body.lang-ar [data-zh],body.lang-ar [data-en]{display:none;}
+        body.lang-ar [data-ar]{display:initial;}
+        body.lang-ar{direction:rtl;font-family:system-ui,sans-serif;}
+        body.lang-ar th,body.lang-ar td{text-align:right;}
+        body.lang-ar .num-ltr{direction:ltr;display:inline-block;}
+        body.lang-ar ul.item-list{padding-right:24px;padding-left:0;}
+
+        #consultMask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center;}
+        #consultMask.active{display:flex;}
+        .modal-box{background:#fff;width:92%;max-width:520px;border-radius:8px;position:relative;padding:32px 28px;max-height:90vh;overflow-y:auto;}
+        #closeConsultBtn{position:absolute;right:20px;top:20px;font-size:30px;cursor:pointer;color:#666;line-height:1;}
+        .modal-box h3{margin:0 0 24px 0;font-size:24px;font-weight:bold;color:#111;}
+        .field-group{margin-bottom:18px;}
+        .field-group label{display:block;font-size:16px;color:#555;margin-bottom:6px;font-weight:bold;}
+        .field-group input[type="text"],.field-group input[type="email"],.field-group input[type="tel"],.field-group textarea,.field-group select{width:100%;padding:10px 12px;border:1px solid #ccc;border-radius:4px;font-size:15px;font-family:inherit;}
+        .field-group textarea{resize:vertical;min-height:80px;}
+        .checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:16px;}
+        .checkbox-group label{cursor:pointer;font-weight:normal;}
+        .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:12px 28px;border-radius:6px;font-size:16px;z-index:9999;display:none;}
+        .toast.show{display:block;animation:fadeInOut 2.5s forwards;}
+        @keyframes fadeInOut{0%{opacity:0;top:0}15%{opacity:1;top:20px}70%{opacity:1;top:20px}100%{opacity:0;top:0}}
+    </style>
+</head>
+<body class="lang-zh">
+<div class="lang-wrap">
+    <select id="langSel">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+</div>
+
+<div class="container">
+    <a class="back-link" href="index.html">
+        <span data-zh>← 返回首页</span>
+        <span data-en>← Back to Home</span>
+        <span data-ar>→ العودة للرئيسية</span>
+    </a>
+    <h1>
+        <span data-zh>固定可调光伏支架</span>
+        <span data-en>Fixed-adjustable PV Support Bracket</span>
+        <span data-ar>حامل الألواح الشمسية القابل للتعديل الثابت</span>
+    </h1>
+
+    <div class="img-tip">
+        <img alt="固定可调光伏支架" src="images/pv_bracket.jpg" onerror="this.parentElement.innerHTML='<div style=\'background:#e8f1fb;border-radius:6px;padding:60px 20px;text-align:center;color:#004080;font-size:18px;\'>☀<br><span data-zh>固定可调光伏支架示意图</span><span data-en>PV Support Bracket</span><span data-ar>حامل الألواح الشمسية</span></div>'">
+        <p data-zh>固定可调光伏支架示意图</p>
+        <p data-en>Schematic Diagram of Fixed-adjustable PV Support Bracket</p>
+        <p data-ar>رسم تخطيطي لحامل الألواح الشمسية القابل للتعديل الثابت</p>
+    </div>
+
+    <h2><span data-zh>设备概况</span><span data-en>Device Overview</span><span data-ar>نظرة عامة على الجهاز</span></h2>
+    <p data-zh>固定可调光伏支架适配沙特60Hz并网系统，采用热镀锌铝合金材质，耐风沙高温腐蚀。可调节倾角提升发电量，结构稳固抗风，安装运维简便，适配大型地面光伏电站，保障光伏阵列稳定高效发电。</p>
+    <p data-en>The fixed-adjustable PV support bracket is compatible with Saudi 60Hz grid-connected system. Made of hot-dip galvanized aluminum-alloy material, it resists sand-wind, high temperature and corrosion. Adjustable inclination improves power generation output. With stable wind-resistant structure and easy installation & maintenance, it is suitable for large-scale ground-mounted PV power stations to ensure stable and efficient power generation of PV arrays.</p>
+    <p data-ar>حامل الألواح الشمسية القابل للتعديل الثابت متوافق مع نظام الربط بالشبكة 60 هرتز في المملكة العربية السعودية. مصنوع من سبائك الألومنيوم المجلفن بالغمس الساخن، يقاوم الرياح الرملية ودرجات الحرارة العالية والتآكل. زاوية الميل القابلة للتعديل تزيد من إنتاج الطاقة. يتميز بهيكل مقاوم للرياح مستقر وسهولة التركيب والصيانة، مناسب لمحطات الطاقة الشمسية الأرضية الكبيرة لضمان توليد طاقة مستقر وفعال لمصفوفات الألواح الشمسية.</p>
+
+    <h2><span data-zh>性能参数</span><span data-en>Performance Parameters</span><span data-ar>معلمات الأداء</span></h2>
+    <table>
+        <tr><th><span data-zh>参数项目</span><span data-en>Parameter Item</span><span data-ar>عنصر المعلمة</span></th><th><span data-zh>参数指标</span><span data-en>Specifications</span><span data-ar>المواصفات</span></th></tr>
+        <tr><td><span data-zh>调节形式</span><span data-en>Adjustment Mode</span><span data-ar>وضع التعديل</span></td><td><span data-zh>小控制器+半自动化跟踪(每天调整一次角度)</span><span data-en>Minor controller + semi-automatic tracking(angle adjusted once per day)</span><span data-ar>وحدة تحكم صغيرة + تتبع شبه أوتوماتيكي (ضبط الزاوية مرة واحدة يومياً)</span></td></tr>
+        <tr><td><span data-zh>调节角度范围</span><span data-en>Adjustable Angle Range</span><span data-ar>نطاق زاوية التعديل</span></td><td><span class="num-ltr">10°~50°</span></td></tr>
+        <tr><td><span data-zh>驱动装置</span><span data-en>Driving Device</span><span data-ar>جهاز التشغيل</span></td><td><span data-zh>手动推杆</span><span data-en>Manual push rod</span><span data-ar>قضيب دفع يدوي</span></td></tr>
+        <tr><td><span data-zh>桩基形式</span><span data-en>Pile Foundation Type</span><span data-ar>نوع أساس الركائز</span></td><td><span data-zh>锤入桩/混凝土灌注桩/预制管桩</span><span data-en>Driven pile / Cast-in-place concrete pile / Precast pipe pile</span><span data-ar>ركيزة مدقوقة / ركيزة خرسانية مصبوبة في الموقع / ركيزة أنبوبية مسبقة الصنع</span></td></tr>
+        <tr><td><span data-zh>结构材料</span><span data-en>Structural Material</span><span data-ar>مادة الهيكل</span></td><td><span data-zh>Q355B及以上高强度结构钢</span><span data-en>High-strength structural steel Q355B and above</span><span data-ar>فولاذ هيكلي عالي القوة Q355B فأعلى</span></td></tr>
+        <tr><td><span data-zh>结构防腐</span><span data-en>Anti-corrosion Treatment</span><span data-ar>معالجة مقاومة للتآكل</span></td><td><span class="num-ltr">HDG/ZAM</span></td></tr>
+        <tr><td><span data-zh>抗风设计</span><span data-en>Wind-resistance Design</span><span data-ar>تصميم مقاوم للرياح</span></td><td><span data-zh>最大0.6kPa</span><span data-en>Max 0.6kPa</span><span data-ar>الحد الأقصى 0.6 كيلو باسكال</span></td></tr>
+        <tr><td><span data-zh>单套系统长度</span><span data-en>Single-set System Length</span><span data-ar>طول نظام المجموعة الواحدة</span></td><td><span class="num-ltr">≤40m</span></td></tr>
+        <tr><td><span data-zh>组件类型</span><span data-en>Compatible Module Type</span><span data-ar>نوع الوحدات المتوافقة</span></td><td><span data-zh>兼容市面所有组件</span><span data-en>Compatible with all mainstream modules on the market</span><span data-ar>متوافق مع جميع الوحدات المتوفرة في السوق</span></td></tr>
+        <tr><td><span data-zh>增益优势</span><span data-en>Power Gain Advantage</span><span data-ar>ميزة زيادة الإنتاج</span></td><td><span data-zh>相较传统固定可调系统增加3%发电量</span><span data-en>3% higher power output compared with traditional fixed-adjustable system</span><span data-ar>زيادة إنتاج الطاقة بنسبة 3٪ مقارنة بأنظمة التعديل الثابت التقليدية</span></td></tr>
+    </table>
+
+    <h2><span data-zh>项目意义</span><span data-en>Project Significance</span><span data-ar>أهمية المشروع</span></h2>
+    <ul class="item-list">
+        <li><span data-zh>适配沙特高温风沙环境，热镀锌铝合金材质确保25年使用寿命，降低全生命周期成本。</span><span data-en>Adapt to Saudi high-temperature and sand-dust environment; hot-dip galvanized aluminum-alloy ensures 25-year service life and reduces life-cycle cost.</span><span data-ar>يتكيف مع بيئة السعودية الحارة والمغبرة؛ سبائك الألومنيوم المجلفنة بالغمس الساخن تضمن عمر خدمة 25 عاماً وتقلل تكلفة دورة الحياة.</span></li>
+        <li><span data-zh>半自动化角度调节每日仅需一次操作，相较固定支架提升发电量，相较全跟踪系统降低投资与维护成本。</span><span data-en>Semi-automatic angle adjustment requires only one operation per day, improving generation vs fixed brackets while reducing investment & maintenance vs full tracking systems.</span><span data-ar>التعديل شبه الأوتوماتيكي للزاوية يتطلب عملية واحدة يومياً فقط، مما يزيد الإنتاج مقارنة بالحوامل الثابتة ويقلل الاستثمار والصيانة مقارنة بأنظمة التتبع الكامل.</span></li>
+        <li><span data-zh>模块化结构设计适配大型地面电站规模化部署，兼容市面所有主流光伏组件。</span><span data-en>Modular structure design suitable for large-scale ground power station deployment, compatible with all mainstream PV modules on the market.</span><span data-ar>تصميم هيكلي معياري مناسب للنشر واسع النطاق في المحطات الأرضية الكبيرة، متوافق مع جميع الوحدات الضوئية الرئيسية في السوق.</span></li>
+    </ul>
+
+    <p>
+        <span data-zh>如需获取报价、详细方案、完整样本资料，请点击按钮提交咨询需求：</span>
+        <span data-en>For quotation, detailed solution and datasheet, click to submit inquiry:</span>
+        <span data-ar>للحصول على السعر والحلول التفصيلية وبيانات المنتج، انقر لإرسال استفسار:</span>
+    </p>
+    <button id="openConsultBtn"><span data-zh>设备咨询</span><span data-en>Inquiry</span><span data-ar>استفسار الجهاز</span></button>
+</div>
+
+<div id="consultMask">
+  <div class="modal-box">
+    <span id="closeConsultBtn">&times;</span>
+    <h3><span data-zh>留言咨询</span><span data-en>Contact Inquiry</span><span data-ar>استفسار بالرسالة</span></h3>
+    <div class="field-group">
+      <label><span data-zh>咨询类型</span><span data-en>Inquiry Type</span><span data-ar>نوع الاستفسار</span></label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="type" value="quote"> <span data-zh>报价</span><span data-en>Quotation</span><span data-ar>عرض سعر</span></label>
+        <label><input type="checkbox" name="type" value="tech"> <span data-zh>技术方案</span><span data-en>Technical Solution</span><span data-ar>حل فني</span></label>
+        <label><input type="checkbox" name="type" value="sample"> <span data-zh>样本资料</span><span data-en>Datasheet</span><span data-ar>ورقة بيانات</span></label>
+        <label><input type="checkbox" name="type" value="other"> <span data-zh>其他</span><span data-en>Others</span><span data-ar>أخرى</span></label>
+      </div>
+    </div>
+    <div class="field-group"><label><span data-zh>您的姓名</span><span data-en>Your Name</span><span data-ar>اسمك</span> <span style="color:red">*</span></label><input type="text" id="consultName"></div>
+    <div class="field-group"><label><span data-zh>公司名称</span><span data-en>Company</span><span data-ar>الشركة</span></label><input type="text" id="consultCompany"></div>
+    <div class="field-group"><label><span data-zh>电子邮箱</span><span data-en>Email</span><span data-ar>البريد الإلكتروني</span> <span style="color:red">*</span></label><input type="email" id="consultEmail"></div>
+    <div class="field-group"><label><span data-zh>联系电话</span><span data-en>Phone</span><span data-ar>رقم الهاتف</span></label><input type="tel" id="consultPhone"></div>
+    <div class="field-group"><label><span data-zh>留言内容</span><span data-en>Message</span><span data-ar>الرسالة</span></label><textarea id="consultMsg"></textarea></div>
+    <button class="modal-submit-btn" id="submitConsult"><span data-zh>提交咨询</span><span data-en>Submit Inquiry</span><span data-ar>إرسال الاستفسار</span></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+    var sel=document.getElementById('langSel');
+    var saved=localStorage.getItem('lang')||'zh';
+    document.body.className='lang-'+saved;sel.value=saved;
+    sel.addEventListener('change',function(){var v=sel.value;document.body.className='lang-'+v;localStorage.setItem('lang',v);});
+    var mask=document.getElementById('consultMask');
+    document.getElementById('openConsultBtn').addEventListener('click',function(){mask.classList.add('active');});
+    document.getElementById('closeConsultBtn').addEventListener('click',function(){mask.classList.remove('active');});
+    mask.addEventListener('click',function(e){if(e.target===mask)mask.classList.remove('active');});
+    function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(function(){t.className='toast';},2600);}
+    document.getElementById('submitConsult').addEventListener('click',function(){
+        var name=document.getElementById('consultName').value.trim();
+        var email=document.getElementById('consultEmail').value.trim();
+        if(!name){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your name':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال اسمك':'请输入您的姓名'));return;}
+        if(!email){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your email':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال بريدك الإلكتروني':'请输入电子邮箱'));return;}
+        var types=Array.from(document.querySelectorAll('input[name="type"]:checked')).map(function(cb){return cb.value;}).join(',')||'未选择';
+        console.log('咨询提交:',{product:'固定可调光伏支架',types:types,name:name,email:email});
+        mask.classList.remove('active');
+        document.querySelectorAll('#consultName,#consultEmail,#consultCompany,#consultPhone,#consultMsg').forEach(function(el){el.value='';});
+        document.querySelectorAll('input[name="type"]').forEach(function(cb){cb.checked=false;});
+        showToast(document.body.className.indexOf('lang-en')>=0?'Submitted successfully!':(document.body.className.indexOf('lang-ar')>=0?'تم الإرسال بنجاح!':'提交成功！我们会尽快与您联系。'));
+    });
+})();
+</script>
+</body>
+</html>

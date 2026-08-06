@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组串式储能变流升压一体机 - 产品介绍</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:"Microsoft Yahei",sans-serif;background:#ffffff;color:#333;line-height:1.8;}
+        .lang-wrap{position:fixed;top:12px;right:12px;z-index:100;}
+        #langSel{padding:6px 12px;background:#004080;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer;}
+        .container{max-width:1000px;margin:0 auto;padding:60px 16px 24px;}
+        h1{font-size:34px;margin-bottom:12px;color:#1a1a1a;text-align:center;padding-bottom:12px;border-bottom:3px solid #004080;}
+        .img-tip{text-align:center;margin:20px 0;}
+        .img-tip img{max-width:100%;width:100%;border-radius:6px;}
+        .img-tip p{color:#666;font-size:16px;margin-top:8px;}
+        h2{font-size:28px;margin:32px 0 16px;color:#0040aa;}
+        table{width:100%;border-collapse:collapse;background:#fff;margin:16px 0 24px;}
+        th,td{border:1px solid #b8c8dd;padding:14px 16px;font-size:18px;}
+        th{background:#e8f1fb;color:#222;}
+        ul.item-list{padding-left:24px;margin:10px 0 28px;font-size:18px;}
+        ul.item-list li{margin-bottom:16px;}
+        .back-link{display:inline-block;margin:16px 0;color:#004080;text-decoration:none;font-size:16px;}
+        .back-link:hover{text-decoration:underline;}
+        #openConsultBtn,.modal-submit-btn{padding:12px 28px;background:#0052cc;color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;margin:16px 0;}
+        #openConsultBtn:hover,.modal-submit-btn:hover{background:#0040a3;}
+        .modal-submit-btn{width:100%;margin-top:8px;}
+
+        [data-en],[data-ar]{display:none;}
+        body.lang-zh [data-zh]{display:initial;}
+        body.lang-en [data-zh]{display:none;}
+        body.lang-en [data-en]{display:initial;}
+        body.lang-ar [data-zh],body.lang-ar [data-en]{display:none;}
+        body.lang-ar [data-ar]{display:initial;}
+        body.lang-ar{direction:rtl;font-family:system-ui,sans-serif;}
+        body.lang-ar th,body.lang-ar td{text-align:right;}
+        body.lang-ar .num-ltr{direction:ltr;display:inline-block;}
+        body.lang-ar ul.item-list{padding-right:24px;padding-left:0;}
+
+        #consultMask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center;}
+        #consultMask.active{display:flex;}
+        .modal-box{background:#fff;width:92%;max-width:520px;border-radius:8px;position:relative;padding:32px 28px;max-height:90vh;overflow-y:auto;}
+        #closeConsultBtn{position:absolute;right:20px;top:20px;font-size:30px;cursor:pointer;color:#666;line-height:1;}
+        .modal-box h3{margin:0 0 24px 0;font-size:24px;font-weight:bold;color:#111;}
+        .field-group{margin-bottom:18px;}
+        .field-group label{display:block;font-size:16px;color:#555;margin-bottom:6px;font-weight:bold;}
+        .field-group input[type="text"],.field-group input[type="email"],.field-group input[type="tel"],.field-group textarea,.field-group select{width:100%;padding:10px 12px;border:1px solid #ccc;border-radius:4px;font-size:15px;font-family:inherit;}
+        .field-group textarea{resize:vertical;min-height:80px;}
+        .checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:16px;}
+        .checkbox-group label{cursor:pointer;font-weight:normal;}
+        .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:12px 28px;border-radius:6px;font-size:16px;z-index:9999;display:none;}
+        .toast.show{display:block;animation:fadeInOut 2.5s forwards;}
+        @keyframes fadeInOut{0%{opacity:0;top:0}15%{opacity:1;top:20px}70%{opacity:1;top:20px}100%{opacity:0;top:0}}
+    </style>
+</head>
+<body class="lang-zh">
+<div class="lang-wrap">
+    <select id="langSel">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+</div>
+
+<div class="container">
+    <a class="back-link" href="index.html">
+        <span data-zh>← 返回首页</span>
+        <span data-en>← Back to Home</span>
+        <span data-ar>→ العودة للرئيسية</span>
+    </a>
+    <h1>
+        <span data-zh>组串式储能变流升压一体机</span>
+        <span data-en>String Energy-Storage PCS Step-up Integrated Unit</span>
+        <span data-ar>وحدة متكاملة لمحول تخزين الطاقة من النوع السلسلي</span>
+    </h1>
+
+    <div class="img-tip">
+        <img alt="储能变流升压一体机" src="images/energy_storage.jpg" onerror="this.parentElement.innerHTML='<div style=\'background:#e8f1fb;border-radius:6px;padding:60px 20px;text-align:center;color:#004080;font-size:18px;\'>🔋<br><span data-zh>储能变流升压一体机示意图</span><span data-en>Energy-Storage PCS Step-up Integrated Unit</span><span data-ar>وحدة محول تخزين الطاقة</span></div>'">
+        <p data-zh>储能变流升压一体机示意图</p>
+        <p data-en>Schematic Diagram of Energy-Storage PCS Step-up Integrated Unit</p>
+        <p data-ar>رسم تخطيطي لوحدة محول تخزين الطاقة مع رفع الجهد</p>
+    </div>
+
+    <h2><span data-zh>设备概况</span><span data-en>Device Overview</span><span data-ar>نظرة عامة على الجهاز</span></h2>
+    <p data-zh>TE5000KT-ED/TE2500KT-ED组串式储能变流升压一体机可实现电池系统簇级精细化管理，具备更好的安全性、经济性、灵活性。PCS单簇分断，分断电流小更安全，有效降低直流拉弧风险。多级故障安全管理，降低木桶效应，提高系统放电量和储能可用率。整机模块化设计，灵活配置，小颗粒度维护，有效降低运维成本和故障影响。</p>
+    <p data-en>TE5000KT-ED / TE2500KT-ED string energy-storage PCS step-up integrated unit realizes cluster-level refined management for battery systems with improved safety, economy and flexibility. PCS single-cluster disconnection adopts low breaking current for higher safety and effectively reduces DC arcing risk. Multi-level fault safety management weakens barrel-effect, raising system discharge capacity and energy-storage availability. Modular whole-machine design supports flexible configuration and fine-granularity maintenance, effectively cutting O&M cost and fault impact.</p>
+    <p data-ar>تقوم الوحدة المتكاملة TE5000KT‑ED / TE2500KT‑ED لمحول تخزين الطاقة السلسلي بإدارة دقيقة على مستوى المجموعات لنظام البطاريات، مع مزايا الأمان والاقتصادية والمرونة العالية. الفصل لكل مجموعة منفصلة بتيار فصل منخفض يعزز السلامة ويقلل مخاطر القوس المستمر للتيار المستمر. إدارة أمان للأعطال متعددة المستويات تقلل من تأثير "تأثير البرميل"، وترفع سعة تفريغ النظام ونسبة توفر تخزين الطاقة. التصميم المعياري الكامل يسمح بالتكوين المرن والصيانة الدقيقة، مما يخفض تكاليف التشغيل والصيانة ونطاق تأثير الأعطال.</p>
+
+    <h2><span data-zh>技术参数</span><span data-en>Technical Parameters</span><span data-ar>المعلمات الفنية</span></h2>
+    <table>
+        <tr><th><span data-zh>参数项目</span><span data-en>Parameter Item</span><span data-ar>عنصر المعلمة</span></th><th><span data-zh>参数指标</span><span data-en>Specifications</span><span data-ar>المواصفات</span></th></tr>
+        <tr><td><span data-zh>直流侧-最大直流电压</span><span data-en>DC Side-Max DC Voltage</span><span data-ar>جانب التيار المستمر-الجهد الأقصى</span></td><td><span class="num-ltr">1500V</span></td></tr>
+        <tr><td><span data-zh>直流侧-满载电压范围</span><span data-en>DC Side-Full-load Voltage Range</span><span data-ar>جانب التيار المستمر-نطاق جهد الحمل الكامل</span></td><td><span class="num-ltr">1000~1500V</span></td></tr>
+        <tr><td><span data-zh>直流侧-输入路数</span><span data-en>DC Side-Input Channels</span><span data-ar>جانب التيار المستمر-قنوات الإدخال</span></td><td><span class="num-ltr">24</span></td></tr>
+        <tr><td><span data-zh>交流侧-额定交流功率</span><span data-en>AC Side-Rated AC Power</span><span data-ar>جانب التيار المتردد-القدرة الاسمية</span></td><td><span class="num-ltr">215 kW x 24 = 5160kW</span></td></tr>
+        <tr><td><span data-zh>交流侧-最大交流功率</span><span data-en>AC Side-Max AC Power</span><span data-ar>جانب التيار المتردد-القدرة القصوى</span></td><td><span class="num-ltr">236.5kW x 24 = 5676kW</span></td></tr>
+        <tr><td><span data-zh>交流侧-接入方式</span><span data-en>AC Side-Connection Mode</span><span data-ar>جانب التيار المتردد-طريقة الربط</span></td><td><span data-zh>三相三线</span><span data-en>Three-phase three-wire</span><span data-ar>ثلاث مراحل ثلاث أسلاك</span></td></tr>
+        <tr><td><span data-zh>变压器-电压变比</span><span data-en>Transformer-Voltage Ratio</span><span data-ar>المحول-نسبة الجهد</span></td><td><span class="num-ltr">37kV±2×2.5%/0.69kV</span></td></tr>
+        <tr><td><span data-zh>变压器-额定功率</span><span data-en>Transformer-Rated Power</span><span data-ar>المحول-القدرة الاسمية</span></td><td><span class="num-ltr">5000kVA</span></td></tr>
+        <tr><td><span data-zh>系统-PCS最高转换效率</span><span data-en>System-PCS Max Conversion Efficiency</span><span data-ar>النظام-كفاءة تحويل PCS القصوى</span></td><td><span class="num-ltr">99%</span></td></tr>
+    </table>
+
+    <h2><span data-zh>项目意义</span><span data-en>Project Significance</span><span data-ar>أهمية المشروع</span></h2>
+    <ul class="item-list">
+        <li><span data-zh>平抑风光功率波动，提升新能源并网消纳水平，适配沙特大基地新能源出力特性，降低对主电网冲击。</span><span data-en>Smooth wind-solar power fluctuation, improve new-energy grid-absorption capacity, adapt to Saudi large-base new-energy output characteristics, and reduce impact on main power grid.</span><span data-ar>تخفيف تقلبات طاقة الرياح والطاقة الشمسية، ورفع مستوى استيعاب الشبكة للطاقات الجديدة، والتكيف مع خصائص إنتاج الطاقة الجديدة في القواعد الكبيرة السعودية، وتقليل التأثير على الشبكة الرئيسية.</span></li>
+        <li><span data-zh>簇级精细化管理消除电池簇间环流，单簇故障隔离不中断整机运行，系统可用率>99%。</span><span data-en>Cluster-level refined management eliminates circulating current between battery clusters; single-cluster fault isolation does not interrupt whole-machine operation; system availability >99%.</span><span data-ar>الإدارة الدقيقة على مستوى المجموعات تقضي على التيار الدائري بين مجموعات البطاريات؛ وعزل عطل المجموعة الواحدة لا يوقف تشغيل الجهاز بأكمله؛ وتوفر النظام >99%.</span></li>
+        <li><span data-zh>模块化设计支持按需扩容，降低初始投资，适配沙特储能市场规模化部署需求。</span><span data-en>Modular design supports on-demand capacity expansion, reduces initial investment, and adapts to large-scale deployment requirements of Saudi energy-storage market.</span><span data-ar>التصميم المعياري يدعم توسيع السعة حسب الطلب، ويقلل الاستثمار الأولي، ويتكيف مع متطلبات النشر واسع النطاق لسوق تخزين الطاقة السعودي.</span></li>
+    </ul>
+
+    <p>
+        <span data-zh>如需获取报价、详细方案、完整样本资料，请点击按钮提交咨询需求：</span>
+        <span data-en>For quotation, detailed solution and datasheet, click to submit inquiry:</span>
+        <span data-ar>للحصول على السعر والحلول التفصيلية وبيانات المنتج، انقر لإرسال استفسار:</span>
+    </p>
+    <button id="openConsultBtn">
+        <span data-zh>设备咨询</span>
+        <span data-en>Inquiry</span>
+        <span data-ar>استفسار الجهاز</span>
+    </button>
+</div>
+
+<div id="consultMask">
+  <div class="modal-box">
+    <span id="closeConsultBtn">&times;</span>
+    <h3><span data-zh>留言咨询</span><span data-en>Contact Inquiry</span><span data-ar>استفسار بالرسالة</span></h3>
+    <div class="field-group">
+      <label><span data-zh>咨询类型</span><span data-en>Inquiry Type</span><span data-ar>نوع الاستفسار</span></label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="type" value="quote"> <span data-zh>报价</span><span data-en>Quotation</span><span data-ar>عرض سعر</span></label>
+        <label><input type="checkbox" name="type" value="tech"> <span data-zh>技术方案</span><span data-en>Technical Solution</span><span data-ar>حل فني</span></label>
+        <label><input type="checkbox" name="type" value="sample"> <span data-zh>样本资料</span><span data-en>Datasheet</span><span data-ar>ورقة بيانات</span></label>
+        <label><input type="checkbox" name="type" value="other"> <span data-zh>其他</span><span data-en>Others</span><span data-ar>أخرى</span></label>
+      </div>
+    </div>
+    <div class="field-group"><label><span data-zh>您的姓名</span><span data-en>Your Name</span><span data-ar>اسمك</span> <span style="color:red">*</span></label><input type="text" id="consultName"></div>
+    <div class="field-group"><label><span data-zh>公司名称</span><span data-en>Company</span><span data-ar>الشركة</span></label><input type="text" id="consultCompany"></div>
+    <div class="field-group"><label><span data-zh>电子邮箱</span><span data-en>Email</span><span data-ar>البريد الإلكتروني</span> <span style="color:red">*</span></label><input type="email" id="consultEmail"></div>
+    <div class="field-group"><label><span data-zh>联系电话</span><span data-en>Phone</span><span data-ar>رقم الهاتف</span></label><input type="tel" id="consultPhone"></div>
+    <div class="field-group"><label><span data-zh>留言内容</span><span data-en>Message</span><span data-ar>الرسالة</span></label><textarea id="consultMsg"></textarea></div>
+    <button class="modal-submit-btn" id="submitConsult"><span data-zh>提交咨询</span><span data-en>Submit Inquiry</span><span data-ar>إرسال الاستفسار</span></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+    var sel=document.getElementById('langSel');
+    var saved=localStorage.getItem('lang')||'zh';
+    document.body.className='lang-'+saved;sel.value=saved;
+    sel.addEventListener('change',function(){var v=sel.value;document.body.className='lang-'+v;localStorage.setItem('lang',v);});
+    var mask=document.getElementById('consultMask');
+    document.getElementById('openConsultBtn').addEventListener('click',function(){mask.classList.add('active');});
+    document.getElementById('closeConsultBtn').addEventListener('click',function(){mask.classList.remove('active');});
+    mask.addEventListener('click',function(e){if(e.target===mask)mask.classList.remove('active');});
+    function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(function(){t.className='toast';},2600);}
+    document.getElementById('submitConsult').addEventListener('click',function(){
+        var name=document.getElementById('consultName').value.trim();
+        var email=document.getElementById('consultEmail').value.trim();
+        if(!name){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your name':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال اسمك':'请输入您的姓名'));return;}
+        if(!email){showToast(document.body.className.indexOf('lang-en')>=0?'Please enter your email':(document.body.className.indexOf('lang-ar')>=0?'يرجى إدخال بريدك الإلكتروني':'请输入电子邮箱'));return;}
+        var types=Array.from(document.querySelectorAll('input[name="type"]:checked')).map(function(cb){return cb.value;}).join(',')||'未选择';
+        console.log('咨询提交:',{product:'组串式储能变流升压一体机',types:types,name:name,email:email,message:document.getElementById('consultMsg').value.trim()});
+        mask.classList.remove('active');
+        document.querySelectorAll('#consultName,#consultEmail,#consultCompany,#consultPhone,#consultMsg').forEach(function(el){el.value='';});
+        document.querySelectorAll('input[name="type"]').forEach(function(cb){cb.checked=false;});
+        showToast(document.body.className.indexOf('lang-en')>=0?'Submitted successfully!':(document.body.className.indexOf('lang-ar')>=0?'تم الإرسال بنجاح!':'提交成功！我们会尽快与您联系。'));
+    });
+})();
+</script>
+</body>
+</html>
